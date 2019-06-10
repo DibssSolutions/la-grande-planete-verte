@@ -28,14 +28,26 @@
               <li class="nav__item"><a href="about.html" class="nav__link">About</a></li>
               <li class="nav__item is-active"><a href="locations.html" class="nav__link">Locations</a></li>
             </ul>
+            <div class="header__contact md-show">
+              <a href="tel:" class="header__tel">
+                <svg class="icon icon-phone">
+                  <use xlink:href="img/sprite.svg#icon-phone"></use>
+                </svg> + (450) 973-4696</a>
+              <a href="#" class="header__btn btn">Make Appointment</a>
+            </div>
           </nav>
-          <div class="header__contact">
+          <div class="header__contact md-hide">
             <a href="tel:" class="header__tel">
               <svg class="icon icon-phone">
                 <use xlink:href="img/sprite.svg#icon-phone"></use>
               </svg> + (450) 973-4696</a>
             <a href="#" class="header__btn btn">Make Appointment</a>
           </div>
+          <button class="btn-menu js-btn-menu md-show" type="button">
+            <span class="btn-menu__line"></span>
+            <span class="btn-menu__line"></span>
+            <span class="btn-menu__line"></span>
+          </button>
         </div>
       </header>
       <!-- end header -->
@@ -46,7 +58,7 @@
           <div class="contacts__content" data-anim="from-left">
             <h2 class="contacts__title-md title-md">Locations</h2>
             <div class="contacts__row">711 Boulevard Curé-Labelle LAVAL, QC H7V2T8</div>
-            <div class="contacts__row">
+            <div class="contacts__row contacts__row_op06">
               <p>Info@grandeplanete.com</p>
               <p>+ (450) 973-4696</p>
             </div>

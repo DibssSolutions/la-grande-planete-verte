@@ -29,11 +29,20 @@
 				<li class="nav__item{% if props.active == loop.index %} is-active{% endif %}"><a href="{{ item.url }}.html" class="nav__link">{{ item.title }}</a></li>
 				{% endfor %}
 			</ul>
+			<div class="header__contact md-show">
+				<a href="tel:" class="header__tel">{{ mixins.icon('phone') }}+ (450) 973-4696</a>
+				<a href="#" class="header__btn btn">Make Appointment</a>
+			</div>
 		</nav>
-		<div class="header__contact">
+		<div class="header__contact md-hide">
 			<a href="tel:" class="header__tel">{{ mixins.icon('phone') }}+ (450) 973-4696</a>
 			<a href="#" class="header__btn btn">Make Appointment</a>
 		</div>
+		<button class="btn-menu js-btn-menu md-show" type="button">
+			<span class="btn-menu__line"></span>
+			<span class="btn-menu__line"></span>
+			<span class="btn-menu__line"></span>
+		</button>
 	</div>
 </header>
 <!-- end header -->

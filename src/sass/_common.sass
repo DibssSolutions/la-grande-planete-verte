@@ -1,4 +1,9 @@
+html
+	&.is-open-menu
+		overflow-y: scroll
+
 body
+	min-width: 320px
 	+fn
 	+f(30px,400,1.6)
 	+fadeout(.6s)
@@ -6,21 +11,51 @@ body
 	background-repeat: no-repeat
 	background-position: center
 	background-image: url(../img/symbols.svg)
+	+lg
+	+font-smoothing
+	+md
+		line-height: 1.53
+	+sm
+		background-image: none
 	&.is-loaded
 		+fadein
-
-
+	.is-open-menu &
+			position: fixed
+			height: 100vh
+			width: 100%
+			overflow: hidden
 .text-green
 	color: $green
 
 .title-gl
 	+ff
 	+f(72px,400,1.25)
-
+	+md
+		font-size: 36px
+		line-height: 1.33
 .title-md
 	+ff
 	+f(54px,400,1.67)
+	+md
+		font-size: 36px
+		line-height: 1.33
 
 .title-sm
 	+ff
 	+f(36px,400,1.34)
+
+.md-hide
+	+md
+		display: none
+.md-show
+	display: none !important
+	+md
+		display: block !important
+.sm-hide
+	+sm
+		display: none
+
+.sm-show
+	display: none !important
+	+sm
+		display: block !important

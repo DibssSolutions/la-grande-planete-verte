@@ -21,9 +21,13 @@
 		max-width: 742px
 		flex-wrap: wrap
 		display: flex
+		+sm
+			flex-direction: column
 	.servicesitem
 		&:not(:last-child)
 			margin-right: 85px
+			+sm
+				margin: 0 0 50px
 .servicesitem
 	position: relative
 	min-height: 580px

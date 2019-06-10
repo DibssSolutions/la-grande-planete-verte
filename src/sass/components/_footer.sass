@@ -2,9 +2,16 @@
 	position: relative
 	padding: 45px 0
 	color: rgba($black, .5)
+	+md
+		padding: 83px 0 45px
 	&_white
 		padding-top: 214px
 		color: $white
+		+md
+			padding: 200px 0 0
+		+sm
+			padding: 83px 0 180px
+			color: $black
 	&__bg
 		position: absolute
 		bottom: 0
@@ -14,6 +21,10 @@
 		font-size: 0
 		img
 			display: block
+			+md
+				width: 1300px
+			+sm
+				width: 1086px
 	&__inner
 		position: relative
 		z-index: 1
@@ -24,6 +35,8 @@
 		justify-content: space-between
 		flex-wrap: wrap
 		display: flex
+		+sm
+			flex-direction: column
 		&[data-anim="from-bottom"]
 			transform: translateY(30px)
 	&__soc
@@ -35,11 +48,19 @@
 	&__copy
 		margin: 0 15px
 		opacity: .5
+		+sm
+			margin-top: 32px
+			opacity: 1
 	&__time
+		+sm
+			margin-bottom: 29px
+			order: -1
 		span
 			text-transform: uppercase
 			.footer_white &
 				color: #B7F1C6
+				+sm
+					color: #44A15B
 .soc
 	align-items: center
 	flex-wrap: wrap
@@ -54,5 +75,7 @@
 			transition: color .3s
 			.soc_white &
 				color: $white
+				+sm
+					color: #A0BBA3
 			+hover
 				color: #CADBCC

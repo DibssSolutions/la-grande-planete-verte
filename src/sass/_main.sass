@@ -3,6 +3,10 @@
 	width: 100%
 	max-width: 1000px
 	padding: 133px 0 94px
+	+md
+		padding: 42px 0 94px
+	+sm
+		padding: 136px 0 150px
 	&__icons,
 	&__cloud
 		position: absolute
@@ -14,18 +18,62 @@
 			max-height: 100%
 			display: block
 	&__icons
+		z-index: 1
 		width: 999px
 		height: 565px
+		+md
+			width: 720px
+			height: 465px
+		+sm
+			margin-top: 3px
+			min-height: 600px
+			height: 100%
+			width: 100%
 	&__cloud
+		+md
+			margin: 30px 0 0 37px
+		img
+			+md
+				width: auto
+				height: 800px
+	&__icon
+		position: absolute
+		img
+			display: block
+		&:first-child
+			top: 0
+			left: 0
+		&:nth-child(2)
+			top: 0
+			right: 0
+		&:nth-child(3)
+			bottom: 0
+			left: 0
+		&:nth-child(4)
+			bottom: 0
+			right: 0
 	&__wrap
 		position: relative
-		z-index: 1
+		z-index: 2
 		text-align: center
 	&__title
 		margin-bottom: 30px
+		+md
+			margin: 0 auto 24px
+			max-width: 247px
 	&__text
+		position: relative
 		margin: 0 auto
 		max-width: 805px
-		opacity: .6
+		color: rgba($black, .6)
+		display: block
+		+md
+			padding: 0 10px
+			max-width: 700px
 	&__footer
 		margin-top: 30px
+		+md
+			margin-top: 24px
+		.btn
+			+xs
+				width: 100%
