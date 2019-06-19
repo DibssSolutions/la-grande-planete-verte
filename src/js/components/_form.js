@@ -1,7 +1,13 @@
 import validate from '../lib/jquery.form-validator.js';
 import select2 from 'select2';
 import datepicker from 'air-datepicker';
-import { ACTIVE, OPEN } from '../constants';
+import { ACTIVE, OPEN, BODY } from '../constants';
+import Inputmask from 'inputmask';
+
+BODY.on('focus', '[data-inputmask]', function() {
+  Inputmask({placeholder: ''}).mask(this);
+});
+
 
 const select = $('.js-select');
 select.select2({ 
